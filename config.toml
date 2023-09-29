@@ -1,6 +1,7 @@
-baseURL = 'http://Code-Triarii.github.io/'
+baseURL = 'http://code-triarii.github.io/'
 languageCode = 'en-us'
 publishDir = "docs"
+theme = 'terminal'
 title = 'Code Triarii Portfolio'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -84,11 +85,3 @@ paginate = 5
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
-
-[module]
-  # In case you would like to make changes to the theme and keep it locally in you repository,
-  # uncomment the line below (and correct the local path if necessary).
-  # --
-  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
-[[module.imports]]
-  path = '/mnt/f/EscritorioPC/Code-Triarii/code-triarii.github.io/themes/terminal'
