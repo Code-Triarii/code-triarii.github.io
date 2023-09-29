@@ -1,4 +1,4 @@
-baseURL = 'http://code-triarii.github.io/'
+baseURL = 'https://code-triarii.github.io/'
 languageCode = 'en-us'
 publishDir = "docs"
 theme = 'terminal'
@@ -6,6 +6,9 @@ title = 'Code Triarii Portfolio'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
 paginate = 5
+
+[outputs]
+  readme = ["HTML"]
 
 [params]
   # dir name of your main content (default is `content/posts`).

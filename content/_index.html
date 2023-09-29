@@ -2,30 +2,69 @@
 title: "Repositories"
 ---
 
+<style>
+  .post-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-fixed {
+    width: 50px;
+    height: auto;
+  }
+</style>
+
+<div class="index-content framed">
+  <h1 id="code-triarii" class="post-title">
+    <a href="https://github.com/Code-Triarii" target="_blank">Code Triarii</a>
+    <img src="logo-triarii1.png" alt="Code-Triarii logo" class="logo-fixed" />
+  </h1>
+
+  <p>
+    Welcome to the <code>Code-Triarii</code> organization repositories! Please,
+    look around and check out our projects.
+  </p>
+</div>
+
 <div id="repos-list"></div>
 
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    <span class="button next">
+      <a href="/about-us/">
+        <span class="button__text">About Us</span>
+        <span class="button__icon">→</span>
+      </a>
+    </span>
+  </div>
+</div>
 <script>
-    fetch('https://api.github.com/orgs/code-triarii/repos')
-    .then(response => {
-        console.log("Respuesta recibida:", response);
-        return response.json();
-    })
-    .then(data => {
-        console.log("Datos recibidos:", data);
-        let reposHTML = '<h2>Our repositories:</h2>';
-        data.forEach(repo => {
-            reposHTML += `
-                <div class="repo-item">
+  fetch("https://api.github.com/orgs/code-triarii/repos")
+    .then((response) => response.json())
+    .then((data) => {
+      let reposHTML = "<h2>Our repositories:</h2>";
+      data.forEach((repo) => {
+        reposHTML += `
+                <div class="post-title">
                     <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                </div>
+                <div class="post-description">
                     <p>${repo.description}</p>
                     <p>Estrellas: ${repo.stargazers_count}</p>
                 </div>
+                <div>
+                    <a class="read-more button" href="https://github.com/Code-Triarii/${repo.name}/blob/main/README.md">Read more →</a>
+                </div>
             `;
-        });
-        document.getElementById('repos-list').innerHTML = reposHTML;
+      });
+      document.getElementById("repos-list").innerHTML = reposHTML;
     })
-    .catch(error => {
-        console.log("Error al obtener datos:", error);
+    .catch((error) => {
+      console.log("Error al obtener datos:", error);
     });
 </script>
-

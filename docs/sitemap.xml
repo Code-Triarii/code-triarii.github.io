@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://code-triarii.github.io/categories/</loc>
+    <loc>https://code-triarii.github.io/about-us/</loc>
   </url><url>
-    <loc>http://code-triarii.github.io/</loc>
+    <loc>https://code-triarii.github.io/categories/</loc>
   </url><url>
-    <loc>http://code-triarii.github.io/tags/</loc>
+    <loc>https://code-triarii.github.io/readme/</loc>
+  </url><url>
+    <loc>https://code-triarii.github.io/</loc>
+  </url><url>
+    <loc>https://code-triarii.github.io/tags/</loc>
   </url>
 </urlset>

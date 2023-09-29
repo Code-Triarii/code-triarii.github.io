@@ -1,216 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-    <title>Repositories :: Terminal</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="fetch(&#39;https://api.github.com/orgs/code-triarii/repos&#39;).then(response = {console.log(&#34;Respuesta recibida:&#34;, response);return response.json();}).then(data = {console.log(&#34;Datos recibidos:&#34;, data);let reposHTML = &#39;Our repositories:&#39;;data.forEach(repo = {reposHTML &#43;= `${repo.name}${repo.description}
-Estrellas: ${repo.stargazers_count}
-`;});document.getElementById(&#39;repos-list&#39;).innerHTML = reposHTML;}).catch(error = {console.log(&#34;Error al obtener datos:&#34;, error);});" />
-<meta name="keywords" content="" />
-
-  <meta name="robots" content="noodp" />
-
-<link rel="canonical" href="http://Code-Triarii.github.io/repos/" />
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  <link rel="stylesheet" href="http://Code-Triarii.github.io/styles.css">
-
-
-
-
-
-
-
-  <link rel="shortcut icon" href="http://Code-Triarii.github.io/img/theme-colors/orange.png">
-  <link rel="apple-touch-icon" href="http://Code-Triarii.github.io/img/theme-colors/orange.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Repositories">
-<meta property="og:description" content="fetch(&#39;https://api.github.com/orgs/code-triarii/repos&#39;).then(response = {console.log(&#34;Respuesta recibida:&#34;, response);return response.json();}).then(data = {console.log(&#34;Datos recibidos:&#34;, data);let reposHTML = &#39;Our repositories:&#39;;data.forEach(repo = {reposHTML &#43;= `${repo.name}${repo.description}
-Estrellas: ${repo.stargazers_count}
-`;});document.getElementById(&#39;repos-list&#39;).innerHTML = reposHTML;}).catch(error = {console.log(&#34;Error al obtener datos:&#34;, error);});" />
-<meta property="og:url" content="http://Code-Triarii.github.io/repos/" />
-<meta property="og:site_name" content="Terminal" />
-
-  
-    <meta property="og:image" content="http://Code-Triarii.github.io/img/favicon/orange.png">
-  
-
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="627">
-
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-<body class="orange">
-
-
-<div class="container headings--one-size">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
-  <div class="logo">
-    Terminal
-  </div>
-</a>
-
-    </div>
-    
-      <ul class="menu menu--mobile">
-  <li class="menu__trigger">Menu&nbsp;▾</li>
-  <li>
-    <ul class="menu__dropdown">
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="/showcase">Showcase</a></li>
-        
-      
-      
-    </ul>
-  </li>
-</ul>
-
-    
-    
-  </div>
-  
-    <nav class="navigation-menu">
-  <ul class="navigation-menu__inner menu--desktop">
-    
-      
-        
-          <li><a href="/about" >About</a></li>
-        
-      
-        
-          <li><a href="/showcase" >Showcase</a></li>
-        
-      
-      
-    
-  </ul>
-</nav>
-
-  
-</header>
-
-
-  <div class="content">
-    
-<article class="post">
-  <h1 class="post-title">
-    <a href="http://Code-Triarii.github.io/repos/">Repositories</a>
-  </h1>
-  <div class="post-meta"></div>
-
-  
-  
-
-
-  
-
-  <div class="post-content"><div>
-        
-<div id="repos-list"></div>
-
-<script>
-    fetch('https://api.github.com/orgs/code-triarii/repos')
-    .then(response => {
-        console.log("Respuesta recibida:", response);
-        return response.json();
-    })
-    .then(data => {
-        console.log("Datos recibidos:", data);
-        let reposHTML = '<h2>Our repositories:</h2>';
-        data.forEach(repo => {
-            reposHTML += `
-                <div class="repo-item">
-                    <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-                    <p>${repo.description}</p>
-                    <p>Estrellas: ${repo.stargazers_count}</p>
-                </div>
-            `;
-        });
-        document.getElementById('repos-list').innerHTML = reposHTML;
-    })
-    .catch(error => {
-        console.log("Error al obtener datos:", error);
-    });
-</script>
-
-
-      </div></div>
-
-  
-
-  
-    
-
-  
-</article>
-
-  </div>
-
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2023 Powered by <a href="https://gohugo.io">Hugo</a></span>
-    
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
-      </div>
-  </div>
-</footer>
-
-
-
-
-
-
-<script type="text/javascript" src="/bundle.min.js"></script>
-
-
-
-
-
-  
-</div>
-
-</body>
-</html>
