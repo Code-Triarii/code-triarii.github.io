@@ -1,0 +1,4 @@
+baseURL = 'http://Code-Triarii.github.io/'
+languageCode = 'en-us'
+publishDir = "docs"
+title = 'Code Triarii Portfolio'
