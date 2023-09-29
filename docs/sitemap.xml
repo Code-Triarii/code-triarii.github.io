@@ -4,8 +4,10 @@
   <url>
     <loc>http://Code-Triarii.github.io/categories/</loc>
   </url><url>
-    <loc>http://Code-Triarii.github.io/</loc>
+    <loc>http://Code-Triarii.github.io/repos/</loc>
   </url><url>
     <loc>http://Code-Triarii.github.io/tags/</loc>
+  </url><url>
+    <loc>http://Code-Triarii.github.io/</loc>
   </url>
 </urlset>

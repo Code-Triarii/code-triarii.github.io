@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Code Triarii Portfolio</title>
+    <title>Terminal</title>
     <link>http://Code-Triarii.github.io/</link>
-    <description>Recent content on Code Triarii Portfolio</description>
+    <description>Recent content on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://Code-Triarii.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Repositories</title>
+      <link>http://Code-Triarii.github.io/repos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://Code-Triarii.github.io/repos/</guid>
+      <description>fetch(&#39;https://api.github.com/orgs/code-triarii/repos&#39;).then(response = {console.log(&#34;Respuesta recibida:&#34;, response);return response.json();}).then(data = {console.log(&#34;Datos recibidos:&#34;, data);let reposHTML = &#39;Our repositories:&#39;;data.forEach(repo = {reposHTML += `${repo.name}${repo.description}
+Estrellas: ${repo.stargazers_count}
+`;});document.getElementById(&#39;repos-list&#39;).innerHTML = reposHTML;}).catch(error = {console.log(&#34;Error al obtener datos:&#34;, error);});</description>
+      <content>
+&lt;div id=&#34;repos-list&#34;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    fetch(&#39;https://api.github.com/orgs/code-triarii/repos&#39;)
+    .then(response =&gt; {
+        console.log(&#34;Respuesta recibida:&#34;, response);
+        return response.json();
+    })
+    .then(data =&gt; {
+        console.log(&#34;Datos recibidos:&#34;, data);
+        let reposHTML = &#39;&lt;h2&gt;Our repositories:&lt;/h2&gt;&#39;;
+        data.forEach(repo =&gt; {
+            reposHTML += `
+                &lt;div class=&#34;repo-item&#34;&gt;
+                    &lt;h3&gt;&lt;a href=&#34;${repo.html_url}&#34; target=&#34;_blank&#34;&gt;${repo.name}&lt;/a&gt;&lt;/h3&gt;
+                    &lt;p&gt;${repo.description}&lt;/p&gt;
+                    &lt;p&gt;Estrellas: ${repo.stargazers_count}&lt;/p&gt;
+                &lt;/div&gt;
+            `;
+        });
+        document.getElementById(&#39;repos-list&#39;).innerHTML = reposHTML;
+    })
+    .catch(error =&gt; {
+        console.log(&#34;Error al obtener datos:&#34;, error);
+    });
+&lt;/script&gt;
+
+</content>
+    </item>
+    
   </channel>
 </rss>
