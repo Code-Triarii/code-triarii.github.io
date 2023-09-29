@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta name="generator" content="Hugo 0.92.2" />
-
+  
     <title>Terminal</title>
-
+  
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A simple, retro theme for Hugo" />
@@ -19,11 +19,11 @@
 
 
 
-
-
-
-
-
+  
+  
+  
+  
+  
   <link rel="stylesheet" href="http://Code-Triarii.github.io/styles.css">
 
 
@@ -48,9 +48,9 @@
 <meta property="og:url" content="http://Code-Triarii.github.io/" />
 <meta property="og:site_name" content="Terminal" />
 
-
+  
     <meta property="og:image" content="http://Code-Triarii.github.io/img/favicon/orange.png">
-
+  
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -85,69 +85,101 @@
 </a>
 
     </div>
-
+    
       <ul class="menu menu--mobile">
   <li class="menu__trigger">Menu&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
-
-
+      
+        
           <li><a href="/about">About</a></li>
-
-
-
+        
+      
+        
           <li><a href="/showcase">Showcase</a></li>
-
-
-
+        
+      
+      
     </ul>
   </li>
 </ul>
 
-
-
+    
+    
   </div>
-
+  
     <nav class="navigation-menu">
   <ul class="navigation-menu__inner menu--desktop">
-
-
-
+    
+      
+        
           <li><a href="/about" >About</a></li>
-
-
-
+        
+      
+        
           <li><a href="/showcase" >Showcase</a></li>
-
-
-
-
+        
+      
+      
+    
   </ul>
 </nav>
 
-
+  
 </header>
 
 
   <div class="content">
+    
+  
+    <div class="index-content ">
+      
+<div id="repos-list"></div>
+
+<script>
+    fetch('https://api.github.com/orgs/code-triarii/repos')
+    .then(response => {
+        console.log("Respuesta recibida:", response);
+        return response.json();
+    })
+    .then(data => {
+        console.log("Datos recibidos:", data);
+        let reposHTML = '<h2>Our repositories:</h2>';
+        data.forEach(repo => {
+            reposHTML += `
+                <div class="repo-item">
+                    <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                    <p>${repo.description}</p>
+                    <p>Estrellas: ${repo.stargazers_count}</p>
+                </div>
+            `;
+        });
+        document.getElementById('repos-list').innerHTML = reposHTML;
+    })
+    .catch(error => {
+        console.log("Error al obtener datos:", error);
+    });
+</script>
 
 
+    </div>
+  
   <div class="posts">
+    
+    
 
+    
+    
+      
+    
+    
 
-
-
-
-
-
-
-
-
+    
 
     <div class="pagination">
   <div class="pagination__buttons">
-
-
+    
+    
   </div>
 </div>
 
@@ -155,13 +187,13 @@
 
   </div>
 
-
+  
     <footer class="footer">
   <div class="footer__inner">
-
+    
       <div class="copyright">
         <span>© 2023 Powered by <a href="https://gohugo.io">Hugo</a></span>
-
+    
       <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
       </div>
   </div>
@@ -178,7 +210,7 @@
 
 
 
-
+  
 </div>
 
 </body>
