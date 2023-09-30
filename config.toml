@@ -62,8 +62,8 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
+    title = "Code Triarii Portfolio"
+    subtitle = "A portfolio of projects by Code Triarii"
     owner = ""
     keywords = ""
     copyright = ""
