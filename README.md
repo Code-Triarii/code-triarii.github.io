@@ -10,8 +10,19 @@
 
 ## 🚀 Getting Started
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Install Hugo and Clone the Repository
 
+Make sure you have `Hugo` package installed. Check `https://gohugo.io/installation/linux/`. For Debian distributions:
+
+```bash
+sudo apt install hugo
+```
+
+If you rather have it all dockerized pull the hugo image and work from there:
+
+```bash
+docker pull klakegg/hugo
+```
 To start, you need to clone the repository to your local machine.
 
 ```bash
